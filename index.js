@@ -21,7 +21,7 @@ client.on('ready', () => {
 });
 
 client.on('messageCreate', async message => {
-	client.prefix = ".";
+	client.prefix = "-";
 	if (!message.content.startsWith(client.prefix) || message.author.bot) return;
 
 	const args = message.content.slice(client.prefix.length).trim().split(/ +/);
