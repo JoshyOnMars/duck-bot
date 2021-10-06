@@ -42,7 +42,7 @@ module.exports = {
             time: 15000,
         });
 
-        message.channel.send({ embeds: [embed] })
+        //message.channel.send({ embeds: [embed] })
 
     //const response = await profileModel.findOneAndUpdate(
     //  {
