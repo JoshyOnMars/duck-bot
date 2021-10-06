@@ -27,8 +27,8 @@ module.exports = {
 
         // Store all client commands in this array.
         const jobList = [];
-        for(const [job, salary] of jobs) {
-            jobList.push({ name: job, value: `<:reply:881608199143325767>Salary: ${salary || "none"}` });
+        for(const i of jobs) {
+            jobList.push({ name: i.job, value: `<:reply:881608199143325767>Salary: ${i.salary || "none"}` });
         }
         // Chunking the commands in smaller arrays. Leave second parameter blank to use default of 15, or choose your own size.
         // Note that Discord doesn't allow any embed to go over 25 fields, 2000 characters.
