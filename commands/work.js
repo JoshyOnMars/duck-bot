@@ -26,7 +26,7 @@ module.exports = {
         const embedPages = [];
 
         // Store all client commands in this array.
-        const clientCommands = [];
+        const jobList = [];
         for(const [job, {salary}] of jobs) {
             jobList.push({ name: job, value: `<:reply:881608199143325767>Salary: ${salary || "none"}` });
         }
