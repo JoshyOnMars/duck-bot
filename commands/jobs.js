@@ -25,12 +25,12 @@ module.exports = {
         // Store all client commands in this array.
         const jobList = [];
         for(const i of jobs) {
-            jobList.push({ name: i.job, value: `\`Salary: $${i.salary || "none"}\`` });
+            jobList.push({ name: i.job, value: `Salary: **$${i.salary || "none"}**` });
         }
         // Chunking the commands in smaller arrays. Leave second parameter blank to use default of 15, or choose your own size.
         // Note that Discord doesn't allow any embed to go over 25 fields, 2000 characters.
         chunk(jobList, 6).forEach((chunks) => {
-            const embed = new MessageEmbed().setColor("YELLOW").setAuthor(`Job List`, client.user.displayAvatarURL(), 'https://discord-power-bot.glitch.me/commands.html').setFooter(`${client.prefix}`);
+            const embed = new MessageEmbed().setColor("YELLOW").setAuthor(`Job List`, client.user.displayAvatarURL(), 'https://discord-power-bot.glitch.me/commands.html').setFooter(`lol`);
             embed.addFields(chunks);
             embedPages.push(embed);
         });
@@ -42,7 +42,7 @@ module.exports = {
             time: 15000,
         });
 
-        message.channel.send({ embeds: [embedPages] })
+        message.channel.send({ embeds: [embed] })
 
     //const response = await profileModel.findOneAndUpdate(
     //  {
